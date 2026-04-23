@@ -1,3 +1,4 @@
+<img width="1920" height="1080" alt="Screenshot 2026-04-23 122942" src="https://github.com/user-attachments/assets/da136c25-1f2b-45d8-b957-a4e33150e981" />
 🚀 LMS Fullstack Deployment with Docker & AWS
 
 📌 Overview
