@@ -75,10 +75,6 @@ http://<your-ec2-ip>
 
 ---
 
-📸 Screenshots
-
-(Add your screenshots here)
-
 ---
 
 🧠 Key Learnings
