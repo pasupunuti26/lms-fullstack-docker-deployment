@@ -69,8 +69,10 @@ docker-compose down
 
 ---
 
-🌐 Live Demo
+🌐 Live Demo 
+
 http://<your-ec2-ip>
+
 
 ---
 
