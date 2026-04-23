@@ -75,8 +75,6 @@ http://<your-ec2-ip>
 
 ---
 
----
-
 🧠 Key Learnings
 
 - Docker networking and service communication
