@@ -1,100 +1,95 @@
+🚀 LMS Fullstack Deployment with Docker & AWS
 
-# Konamars LMS
+📌 Overview
 
-## App environments
+This project is a fullstack Learning Management System (LMS) deployed on AWS EC2 using Docker and Docker Compose.
 
-| Environment                                                               | Git Branch |
-| ------------------------------------------------------------------------- | ---------- |
-| [production](https://calm-pebble-0c3131110.1.azurestaticapps.net/)        | main       |
-| [dev](https://calm-pebble-0c3131110-dev.centralus.1.azurestaticapps.net/) | dev        |
-| [qa](https://calm-pebble-0c3131110-dev.centralus.1.azurestaticapps.net/)  | qa         |
+It includes frontend, backend, and PostgreSQL database with persistent storage.
 
-## Run project locally
+---
 
-- Install node modules with `npm install`
-- Run local dev server with `npm dev`
+🧱 Architecture
 
-## Run in production
+Frontend (Nginx)
+↓
+Backend (Node.js + Prisma)
+↓
+PostgreSQL (Docker Volume for persistence)
 
-- Install node modules with `npm install`
-- Build with `npm build`
-- Serve generated `dist/` folder with a production web server
+---
 
-_View the deployment resource in azure cloud portal at [here.](https://portal.azure.com/#@mkonakonamars.onmicrosoft.com/resource/subscriptions/d5f3450e-23c9-47f0-a07c-f650dee64c3c/resourcegroups/javascript-stack/providers/Microsoft.Web/staticSites/konamars/staticsite)_
-=======
-# LMS Full Stack Application
+⚙️ Tech Stack
 
-## Project Overview
-This is a Full Stack Learning Management System (LMS) application deployed on AWS EC2 using Nginx and HTTPS.
+- Frontend: React
+- Backend: Node.js
+- Database: PostgreSQL
+- ORM: Prisma
+- DevOps: Docker, Docker Compose
+- Deployment: AWS EC2
 
-##  Tech Stack
-- Frontend: React + Vite
-- Backend: Node.js + Express
-- Server: AWS EC2 (Ubuntu)
-- Web Server: Nginx
-- SSL: Let's Encrypt (Certbot)
-- Version Control: Git & GitHub
+---
 
-## Live Application
-https://harishdev.com
+🔥 Key Features
 
-## Deployment Steps
-1. Setup EC2 instance
-2. Install Node.js and Nginx
-3. Configure reverse proxy
-4. Setup SSL using Certbot
-5. Configure environment variables
-6. Build frontend
-7. Deploy backend service
+- Fullstack LMS application
+- REST API integration
+- Dockerized services (frontend, backend, database)
+- Persistent database using Docker volumes
+- Production deployment on AWS EC2
 
-## Key Features
-- HTTPS enabled
-- Reverse proxy configuration
-- Production build deployment
-- Environment variable configuration
-- GitHub version control
+---
 
+🐳 Docker Setup
 
-## 🏗 Architecture Diagram
+Start application
 
-![LMS Architecture](lms%20ec2%20architecture.png)
+docker-compose up -d
 
-## 🚀 Deployment Steps (EC2 Manual Deployment)
+Stop application
 
-### 1️⃣ Launch EC2 Instance
-- Ubuntu 22.04
-- Open ports: 22, 80, 443
+docker-compose down
 
-### 2️⃣ Install Dependencies
+---
 
-```bash
-sudo apt update
-sudo apt install nginx -y
-sudo apt install nodejs npm -y
+💾 Database Persistence
 
-3️⃣ Clone Repository
-git clone https://github.com/your-username/lms-fullstack-aws-deployment.git
-cd lms-fullstack-aws-deployment
+- PostgreSQL uses Docker volumes
+- Data remains safe after container restart
+- Avoid using:
+  docker-compose down -v (this deletes data)
 
-4️⃣ Start Backend
-cd api
-npm install
-npm start
+---
 
-5️⃣ Configure Nginx Reverse Proxy
-Proxy from port 80/443
-Backend running on port 8080
-6️⃣ Enable HTTPS (Certbot)
-sudo apt install certbot python3-certbot-nginx
-sudo certbot --nginx -d yourdomain.com
+🧪 Testing
 
+- Restarted containers → data persisted
+- Verified API endpoints
+- Verified UI + backend integration
 
-## 📸 Application Screenshot
+---
 
-![LMS Application](docs/lmsapplication.png)
+🌐 Live Demo
 
+http://<your-ec2-ip>
 
+---
 
-## Author
+📸 Screenshots
+
+(Add your screenshots here)
+
+---
+
+🧠 Key Learnings
+
+- Docker networking and service communication
+- Database persistence using volumes
+- Debugging container crashes
+- Prisma integration with PostgreSQL
+- Real-world deployment on AWS EC2
+
+---
+
+👨‍💻 Author
+
 Harish Pasupunuti
-
